@@ -33,3 +33,8 @@ This project aims to speed up learning new language
 - Auto translation using google/yandex/... translator
 - Import/Export words
 - Link words with account/some other system
+
+### Roadmap | Desired features
+
+- Colourful, adaptive design + glassmorphism
+- List of already learned words
