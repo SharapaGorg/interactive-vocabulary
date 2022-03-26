@@ -1,5 +1,5 @@
 <template>
-  <div ref="root" class="inline-block md:w-1/3 w-2/3">
+  <div ref="root" class="md:w-1/3 w-2/3">
     <input class="search" placeholder="Word" spellcheck="false"/>
   </div>
 </template>

@@ -1,12 +1,22 @@
 <template>
   <div ref="root">
 
-
     <div @click='newWord = false' class="h-screen overflow-y-auto">
-      <div>
-        <search class="relative md:left-1/3"/>
-        <div class="add-button disable-select md:left-1/3" ref="addButton">
-          <span>[+]</span>
+      <search class="relative block mx-auto"/>
+
+      <div class="toolkit">
+        <div class="trash">
+          <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+            <path
+              d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 26 C 23.105 26 24 25.105 24 24 L 24 8 L 6 8 z"/>
+          </svg>
+        </div>
+
+        <div class="plus" ref="addButton">
+          <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+            <path
+              d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M37,26H26v11h-2V26H13v-2h11V13h2v11h11V26z"/>
+          </svg>
         </div>
       </div>
 
@@ -54,7 +64,7 @@
             class="new-word-field"
             placeholder="арбуз"/><br>
         </div>
-        <div class="add-button left-1/3" style="background : transparent"></div>
+        <div class="add-button left-1/3" style="background : transparent; cursor: auto"></div>
         <div class="add-button float-right mt-2 left-1/3" style="left : 0" @click="addWord">add</div>
       </div>
     </div>
@@ -75,13 +85,14 @@ export default {
       translation: '',
       showedWord: '',
       newWord: false,
-      wordsList: ['pleasure', 'kind of dumb', 'unleashed', 'cuz', 'wind up'],
+      wordsList: ['pleasure', 'kind of dumb', 'unleashed', 'cuz', 'wind up', 'admit'],
       words: {
         pleasure: 'удовольствие',
         'kind of dumb': 'тупость',
         unleashed: 'освобожденный',
         cuz: 'потому что',
-        'wind up': 'заводить (часы)'
+        'wind up': 'заводить (часы)',
+        'admit': 'признаться'
       }
     }
   },
@@ -108,58 +119,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-.new-word {
-  width: fit-content;
-  font-family: 'Lato', sans-serif;
-  transition: all .5s ease;
-  @apply px-5 py-8 mx-auto my-4 rounded-md bg-[#dad5d5]
-}
-
-.new-word-field {
-  font-family: 'Lato', sans-serif;
-  @apply md:w-[300px] outline-none rounded-md bg-[#dad5d5];
-  @apply ml-4 py-1 px-2 border-[#6254FF];
-  @apply border-[2px];
-}
-
-.word {
-  font-family: 'Lato', sans-serif;
-  transition: all .5s ease;
-  @apply px-4 py-2 bg-[#dad5d5] rounded-md text-center;
-  @apply font-bold mx-auto border-[#6254FF];
-  @apply border-[2px]
-}
-
-.translation {
-  @apply font-bold mx-auto bg-[#dad5d5] rounded-md;
-  @apply border-[0px] border-[#6254FF];
-  @apply text-center py-2
-}
-
-.add-button {
-  @apply px-2 py-1 inline-block relative bg-[#6254FF];
-  @apply cursor-pointer w-[120px] text-center text-white font-bold rounded-md
-}
-
-.words-actions {
-  @apply fixed right-0 bottom-0 bg-[#dad5d5] px-3 py-2 rounded-sm;
-}
-
-.translate-all {
-  font-family: 'Lato', sans-serif;
-  @apply px-2 py-1 text-center bg-[#6254FF] text-white rounded-sm;
-  @apply font-bold cursor-pointer;
-}
-
-.disable-select {
-  user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-}
-
-</style>

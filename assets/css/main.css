@@ -1,0 +1,64 @@
+.new-word {
+  width: fit-content;
+  font-family: 'Lato', sans-serif;
+  transition: all .5s ease;
+  @apply px-5 py-8 mx-auto my-4 rounded-md bg-[#dad5d5];
+  @apply border-[2px] border-[#6254FF]
+}
+
+.new-word-field {
+  font-family: 'Lato', sans-serif;
+  @apply md:w-[300px] outline-none rounded-md bg-[#dad5d5];
+  @apply ml-4 py-1 px-2 border-[#6254FF];
+  @apply border-[2px];
+}
+
+.word {
+  font-family: 'Lato', sans-serif;
+  transition: all .5s ease;
+  @apply px-4 py-2 bg-[#dad5d5] rounded-md text-center;
+  @apply font-bold mx-auto border-[#6254FF];
+  @apply border-[2px]
+}
+
+.translation {
+  @apply font-bold mx-auto bg-[#dad5d5] rounded-md;
+  @apply border-[0px] border-[#6254FF];
+  @apply text-center py-2
+}
+
+.add-button {
+  @apply px-2 py-1 inline-block relative bg-[#6254FF];
+  @apply cursor-pointer w-[120px] text-center text-white font-bold rounded-md
+}
+
+.words-actions {
+  @apply fixed right-0 bottom-0 bg-[#dad5d5] px-3 py-2 rounded-sm;
+}
+
+.translate-all {
+  font-family: 'Lato', sans-serif;
+  @apply px-2 py-1 text-center bg-[#6254FF] text-white rounded-sm;
+  @apply font-bold cursor-pointer;
+}
+
+.toolkit {
+  @apply w-[350px] mx-auto bg-[#dad5d5] mt-2 px-2 py-1 rounded-md;
+  @apply grid grid-cols-3 justify-items-center
+}
+
+.trash {
+  @apply w-[42px] h-[42px] cursor-pointer
+}
+
+.plus {
+  @apply w-[42px] h-[42px] cursor-pointer
+}
+
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
